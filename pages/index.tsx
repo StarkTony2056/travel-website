@@ -1,8 +1,18 @@
-import React from 'react'
+
+import MobileNav from '@/components/MobileNav'
+import Navbar from '@/components/Navbar'
+import React, { useState } from 'react'
 
 const HomePage = () => {
+  const [nav, setNav] = useState(false);
+  const openNavHandler = () => setNav(true)
+  const closeNavHandler = () => setNav(false)
+
   return (
-    <div className='text-9xl text-red-700'>HomePage</div>
+    <div className='overflow-x-hidden'>
+      <MobileNav nav={nav} closeNav={closeNavHandler} />
+      <Navbar openNav={openNavHandler} />
+    </div>
   )
 }
 
