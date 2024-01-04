@@ -1,4 +1,5 @@
 
+import Hero from '@/components/Hero';
 import MobileNav from '@/components/MobileNav'
 import Navbar from '@/components/Navbar'
 import React, { useState } from 'react'
@@ -12,6 +13,7 @@ const HomePage = () => {
     <div className='overflow-x-hidden'>
       <MobileNav nav={nav} closeNav={closeNavHandler} />
       <Navbar openNav={openNavHandler} />
+      <Hero />
     </div>
   )
 }
